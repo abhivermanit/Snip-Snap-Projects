@@ -15,3 +15,56 @@ Job Launcher Framework -	Custom framework built in-house using DSLs to define an
 Artifacts	Bundled code/resources like SQL scripts used in the pipeline.
 Pipeline DSL -	Used to define stages (.fork) and jobs (.java) in the pipeline.
 RunMode -	Specifies if this is a test or production run.
+
+
+# Part - 1 (Build the object and logger)
+
+object map_pipeline extends LazyLogging  {
+
+  val snowflakeScriptRunnerClass = "xyz"
+  val tableauRefresh = "xyz"
+  val pipelineName = "Snowflake - aip"
+  val pipelineDescription = "aip pipeline and dashboard refresh"
+
+  val khAutomationInsightsTableauDashboards = List(
+      "::Automation::Automation Insights Metrics"
+  )
+
+  Explanation :- 
+
+  // Class – you can make many copies
+class Dog
+val d1 = new Dog()
+val d2 = new Dog() // ✅ Multiple instances
+
+// Object – only one copy ever
+object DogTrainer
+// You can't do: new DogTrainer() ❌
+
+
+- This creates a singleton object (i.e., only one instance of it will ever exist).
+
+- It's like a main class in Java.
+
+- This is where your pipeline starts — the "main brain" of the automation.
+
+
+Lazy Logging 
+
+- It adds logging functionality to your Scala object
+- great for debugging, monitoring, and auditing
+- Lazy means the logger is only created when it’s first used, not immediately when the object loads
+- 
+
+
+
+
+
+
+
+
+
+
+
+
+  
