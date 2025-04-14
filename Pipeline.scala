@@ -26,11 +26,11 @@ object map_pipeline extends LazyLogging  {
   val pipelineName = "Snowflake - aip"
   val pipelineDescription = "aip pipeline and dashboard refresh"
 
-  val khAutomationInsightsTableauDashboards = List(
+  val dashboard_list = List(
       "::Automation::Automation Insights Metrics"
   )
 
-  Explanation :- 
+#  Explanation:- 
 
   // Class – you can make many copies
 class Dog
@@ -54,7 +54,12 @@ Lazy Logging
 - It adds logging functionality to your Scala object
 - great for debugging, monitoring, and auditing
 - Lazy means the logger is only created when it’s first used, not immediately when the object loads
-- 
+- By extending LazyLogging, it gets access to a built-in logger, 
+  which we use to log important information like process start, success, errors, and debug messages.
+
+val is used for defining immutable variables in scala 
+
+
 
 
 
